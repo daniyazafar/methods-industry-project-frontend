@@ -3,13 +3,13 @@
 
 
 .footer {
-    background-color: $footer-bg;
-    padding: 20px;
+    background-color: $dark-green;
+    padding: .5rem;
     text-align: center;
     color: $footer-text;
+    margin-top: 75vh;
   
   .footer__text {
     font-size: 14px;
-    margin: 0;
   }
 }
