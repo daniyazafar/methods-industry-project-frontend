@@ -1,0 +1,9 @@
+@import "/styles/partials/_variables.scss";
+@import "/styles/partials/_mixins.scss";
+
+:root{
+    background-color: $light-grey;
+    margin: 0;
+    padding: 0;
+    font-family: "helvetica", sans-serif;
+}
