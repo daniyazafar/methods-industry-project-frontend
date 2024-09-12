@@ -1,0 +1,121 @@
+@import "../../../styles/partials/_mixins.scss";
+@import "../../../styles/partials/_variables.scss";
+
+.form-container {
+    text-align: center;
+    margin: 1.25rem auto;
+    min-width: 9.375rem;
+}
+
+.form {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: .625rem;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+    display: inline-block;
+
+    label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        margin-right: .625rem;
+    }
+
+    &__budget,
+    &__name,
+    &__age,
+    &__theme-pack,
+    &__favorite-genre {
+        width: 60%;
+        padding: .625rem;
+        margin-bottom: 1.25rem;
+        border: .0625rem solid #ccc;
+        border-radius: .3125rem;
+        font-size: .875rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+    }
+
+  // Form Row
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: .9375rem;
+        justify-content: space-between;
+    }
+
+    &__add-button,
+    &__submit-button {
+        @extend .button-base;
+        margin-bottom: 1rem;
+    }
+}
+
+.see-bundle-button {
+    @extend .button-base;
+    margin-top: 16px;
+}
+
+.button-base {
+    padding: .625rem .9375rem;
+    background-color: #462b6a;
+    color: #fff;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    font-size: .875rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #5a3b82;
+    }
+
+    &:active {
+        background-color: #341f45;
+    }
+}
+
+.family-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 1.25rem;
+    justify-content: center;
+}
+
+.family-card {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 9.375rem;
+    min-width: .625rem;
+}
+
+.family-card__icon {
+    background-color: #462b6a;
+    padding: .625rem;
+    border-radius: 50%;
+    margin-bottom: .625rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.family-card__details {
+    color: #333;
+    text-align: left;
+    word-wrap: break-word;
+}

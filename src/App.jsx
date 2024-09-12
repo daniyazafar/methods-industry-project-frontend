@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
+import { BrowserRouter as Router } from "react-router-dom";
+import { useState } from "react";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
+import "./App.scss";
+import Form from "./Components/Form/Form";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h1>Telus Industry Project</h1>
-    </>
-  )
+    <Router> {/* Wrap your app with Router */}
+      <Header />
+      <Form />
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

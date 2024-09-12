@@ -1,0 +1,35 @@
+@import "../../../styles/partials/_mixins.scss";
+@import "../../../styles/partials/_variables.scss";
+
+// Header styles
+.header {
+  background-color: $dark-green;
+  padding: 20px;
+  text-align: center;
+  color: $header-text;
+  border-bottom: $light-green 5px solid; // Existing border
+  position: relative; // Ensure positioning context for the pseudo-element
+
+  .header__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__text {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    width: 3rem;
+  }
+
+  p{
+    font-style: italic;
+    padding: 0;
+    margin: .25rem 0 0 0;
+  }
+}
