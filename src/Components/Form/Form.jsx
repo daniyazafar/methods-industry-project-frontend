@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.scss";
+import confetti from "canvas-confetti"; // Import the confetti library
 import SeeBundleModal from "../SeeBundleModal/SeeBundleModal"; // Import the modal component
 
 function Form() {
@@ -72,10 +73,20 @@ function Form() {
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
+    launchConfetti();
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const launchConfetti = () => {
+    confetti({
+      particleCount: 150,
+      spread: 60,
+      origin: { y: 0.6 }, // Adjust the starting point (lower down the screen)
+      colors: ["#6a1b9a", "#388e3c", "#8e24aa", "#4caf50"],
+    });
   };
 
   return (
