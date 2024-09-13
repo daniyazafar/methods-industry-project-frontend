@@ -140,6 +140,7 @@ function Form() {
                 <option value="Sci-Fi">Lifestyle</option>
                 <option value="Thriller">Comedy</option>
                 <option value="Western">Family</option>
+
               </select>
             </div>
 

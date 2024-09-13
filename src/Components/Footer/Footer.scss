@@ -3,10 +3,14 @@
 
 
 .footer {
+
     background-color: $dark-green;
     padding: .5rem;
     text-align: center;
     color: $footer-text;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   
   .footer__text {
     font-size: 14px;
