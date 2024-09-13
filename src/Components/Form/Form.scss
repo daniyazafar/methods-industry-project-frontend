@@ -98,6 +98,8 @@
     align-items: center;
     width: 9.375rem;
     min-width: .625rem;
+    transform: scale(0); // Set initial scale to 0
+    animation: scaleUp 0.6s ease forwards; 
 }
 
 .family-card__icon {
@@ -118,3 +120,22 @@
     text-align: left;
     word-wrap: break-word;
 }
+
+.form__error {
+    color: #c94515;
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+  }
+  
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

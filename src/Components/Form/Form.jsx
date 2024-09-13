@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.scss";
+import confetti from "canvas-confetti"; // Import the confetti library
 import SeeBundleModal from "../SeeBundleModal/SeeBundleModal"; // Import the modal component
 
 function Form() {
@@ -10,6 +11,7 @@ function Form() {
   const [age, setAge] = useState("");
   const [favoriteGenre, setFavoriteGenre] = useState("");
   const [familyMembers, setFamilyMembers] = useState([]);
+  const [error, setError] = useState(""); // State to track errors
 
   // Array of 10 different shades of green and purple
   const colors = [
@@ -41,6 +43,15 @@ function Form() {
   const handleAddButtonClick = (event) => {
     event.preventDefault();
 
+    // Check for empty fields
+    if (!name || !age || !favoriteGenre) {
+      setError("Whoops, looks like you're missing something!");
+      return;
+    }
+
+    // Reset error if validation passes
+    setError("");
+
     // Create a new member with a randomly selected color
     const newMember = {
       name,
@@ -62,10 +73,20 @@ function Form() {
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
+    launchConfetti();
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const launchConfetti = () => {
+    confetti({
+      particleCount: 150,
+      spread: 60,
+      origin: { y: 0.6 }, // Adjust the starting point (lower down the screen)
+      colors: ["#6a1b9a", "#388e3c", "#8e24aa", "#4caf50"],
+    });
   };
 
   return (
@@ -140,7 +161,6 @@ function Form() {
                 <option value="Sci-Fi">Lifestyle</option>
                 <option value="Thriller">Comedy</option>
                 <option value="Western">Family</option>
-
               </select>
             </div>
 
@@ -151,6 +171,9 @@ function Form() {
             >
               Add
             </button>
+
+            {/* Display error message if any field is blank */}
+            {error && <p className="form__error">{error}</p>}
           </>
         )}
       </form>
