@@ -67,7 +67,6 @@ function Form() {
     setName("");
     setAge("");
     setFavoriteGenre("");
-    setBudget("");
     setShowFields(false);
 
     // Launch confetti when a new member is added
