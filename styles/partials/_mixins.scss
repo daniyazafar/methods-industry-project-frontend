@@ -1,5 +1,24 @@
 @use './media' as *;
 
+
+//breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+// Tablet mixin for responsive styles at tablet sizes
+@mixin tablet {
+  @media (min-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+// Desktop mixin for responsive styles at desktop sizes
+@mixin desktop {
+  @media (min-width: #{$desktop-breakpoint}) {
+    @content;
+  }
+}
+
 body {
     font-family: 'Helvetica';
     font-size: .8125rem;
