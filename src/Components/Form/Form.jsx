@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Form.scss";
-import confetti from "canvas-confetti"; // Import the confetti library
-import SeeBundleModal from "../SeeBundleModal/SeeBundleModal"; // Import the modal component
+import confetti from "canvas-confetti";
+import SeeBundleModal from "../SeeBundleModal/SeeBundleModal"; 
 
 function Form() {
   const [budget, setBudget] = useState("");
@@ -42,6 +42,7 @@ function Form() {
 
   const handleAddButtonClick = (event) => {
     event.preventDefault();
+    launchConfetti();
 
     // Check for empty fields
     if (!name || !age || !favoriteGenre) {
@@ -67,13 +68,12 @@ function Form() {
     setName("");
     setAge("");
     setFavoriteGenre("");
-    setBudget("");
     setShowFields(false);
   };
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
-    launchConfetti();
+    // launchConfetti();
   };
 
   const handleCloseModal = () => {

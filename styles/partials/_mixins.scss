@@ -69,3 +69,9 @@ label, button {
         line-height: 1.25rem;
     }
 }
+
+@mixin flex-column($gap: 16px) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+  }

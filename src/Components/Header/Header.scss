@@ -11,10 +11,7 @@
   position: relative; // Ensure positioning context for the pseudo-element
 
   .header__title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
   }
 
   .header__text {
