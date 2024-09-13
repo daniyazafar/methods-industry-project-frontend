@@ -6,13 +6,30 @@ function Form() {
   const [budget, setBudget] = useState("");
   const [showFields, setShowFields] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [themePack, setThemePack] = useState("");
   const [favoriteGenre, setFavoriteGenre] = useState("");
-
   const [familyMembers, setFamilyMembers] = useState([]);
+
+  // Array of 10 different shades of green and purple
+  const colors = [
+    "#6a1b9a", // Dark purple
+    "#8e24aa", // Medium purple
+    "#9c27b0", // Light purple
+    "#7b1fa2", // Deep purple
+    "#4a148c", // Darker purple
+    "#388e3c", // Medium green
+    "#2e7d32", // Dark green
+    "#1b5e20", // Forest green
+    "#4caf50", // Light green
+    "#66bb6a", // Mint green
+  ];
+
+  // Function to select a random color from the colors array
+  const getRandomColor = () => {
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
 
   const handleBudgetChange = (event) => {
     setBudget(event.target.value);
@@ -24,16 +41,20 @@ function Form() {
 
   const handleAddButtonClick = (event) => {
     event.preventDefault();
+
+    // Create a new member with a randomly selected color
     const newMember = {
       name,
       age,
       themePack,
       favoriteGenre,
       budget,
+      color: getRandomColor(), // Assign random color
     };
 
     setFamilyMembers([...familyMembers, newMember]);
 
+    // Reset form fields
     setName("");
     setAge("");
     setThemePack("");
@@ -141,7 +162,10 @@ function Form() {
       <div className="family-cards">
         {familyMembers.map((member, index) => (
           <div key={index} className="family-card">
-            <div className="family-card__icon">
+            <div
+              className="family-card__icon"
+              style={{ backgroundColor: member.color }} // Set the icon background color
+            >
               <img
                 src="https://img.icons8.com/ios-filled/50/ffffff/user.png"
                 alt="User Icon"
@@ -160,7 +184,6 @@ function Form() {
               <p>
                 <strong>Favorite Genre:</strong> {member.favoriteGenre}
               </p>
-              <p></p>
             </div>
           </div>
         ))}
