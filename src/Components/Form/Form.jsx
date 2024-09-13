@@ -137,15 +137,27 @@ function Form() {
 
             <div className="form__row">
               <label htmlFor="favoriteGenre">Favorite Genre:</label>
-              <input
+              <select
                 className="form__favorite-genre"
-                type="text"
                 name="favoriteGenre"
                 id="favoriteGenre"
-                placeholder="Enter favorite genre"
                 value={favoriteGenre}
                 onChange={(e) => setFavoriteGenre(e.target.value)}
-              />
+              >
+                <option value="" disabled>
+                  Select your favorite genre
+                </option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Western">Western</option>
+              </select>
             </div>
 
             <button
