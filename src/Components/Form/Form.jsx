@@ -8,7 +8,6 @@ function Form() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  const [themePack, setThemePack] = useState("");
   const [favoriteGenre, setFavoriteGenre] = useState("");
   const [familyMembers, setFamilyMembers] = useState([]);
 
@@ -46,7 +45,6 @@ function Form() {
     const newMember = {
       name,
       age,
-      themePack,
       favoriteGenre,
       budget,
       color: getRandomColor(), // Assign random color
@@ -57,7 +55,6 @@ function Form() {
     // Reset form fields
     setName("");
     setAge("");
-    setThemePack("");
     setFavoriteGenre("");
     setBudget("");
     setShowFields(false);
@@ -121,20 +118,6 @@ function Form() {
                 onChange={(e) => setAge(e.target.value)}
               />
             </div>
-
-            <div className="form__row">
-              <label htmlFor="themePack">Theme Pack:</label>
-              <input
-                className="form__theme-pack"
-                type="text"
-                name="themePack"
-                id="themePack"
-                placeholder="Enter theme pack"
-                value={themePack}
-                onChange={(e) => setThemePack(e.target.value)}
-              />
-            </div>
-
             <div className="form__row">
               <label htmlFor="favoriteGenre">Favorite Genre:</label>
               <select
@@ -147,16 +130,17 @@ function Form() {
                 <option value="" disabled>
                   Select your favorite genre
                 </option>
-                <option value="Action">Action</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Drama">Drama</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Horror">Horror</option>
-                <option value="Mystery">Mystery</option>
-                <option value="Romance">Romance</option>
-                <option value="Sci-Fi">Sci-Fi</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Western">Western</option>
+                <option value="Action">Drama</option>
+                <option value="Comedy">Food and DIY</option>
+                <option value="Drama">Sports</option>
+                <option value="Fantasy">Blockbusters</option>
+                <option value="Horror">Science and History</option>
+                <option value="Mystery">Nature and Exploring</option>
+                <option value="Romance">Regional Favourites</option>
+                <option value="Sci-Fi">Lifestyle</option>
+                <option value="Thriller">Comedy</option>
+                <option value="Western">Family</option>
+
               </select>
             </div>
 
@@ -189,9 +173,6 @@ function Form() {
               </p>
               <p>
                 <strong>Age:</strong> {member.age}
-              </p>
-              <p>
-                <strong>Theme Pack:</strong> {member.themePack}
               </p>
               <p>
                 <strong>Favorite Genre:</strong> {member.favoriteGenre}
