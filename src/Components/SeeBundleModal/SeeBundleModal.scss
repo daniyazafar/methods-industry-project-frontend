@@ -11,13 +11,25 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    color: $dark-grey;
+
     &__content {
-        background: #457e22;
+        position: relative; /* Ensure positioning for close button */
+        background: $light-grey;
         padding: 1.25rem;
         border-radius: .5rem;
         width: 80%;
         max-width: 31.25rem;
         text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &__details{
+
+        h2{
+            font-size:2rem;
+            line-height: 1;
+        }
     }
     
     &__close {
@@ -27,8 +39,20 @@
         cursor: pointer;
         font-size: 1.5rem;
         color: #333;
+        transition: color 0.3s;
+        
+        &:hover {
+            color: #e74c3c; /* Change color on hover */
+        }
     }
-    &__details > * {
-        color: $white;
+
+    .modal__bundle {
+        margin: 1rem 0; /* Add some margin around the image */
+    }
+
+    img {
+        max-width: 30rem;
+        max-height: 20rem;
+        border-radius: 2rem;
     }
 }
