@@ -15,7 +15,9 @@ const Header = () => {
           alt="BrainStation Logo"
         />
       </div>
-      <p>Every person is different. So is every streaming service. </p>
+      <p>
+        Every person is different. <br></br> So is every streaming service.{" "}
+      </p>
     </header>
   );
 };

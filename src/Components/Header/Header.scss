@@ -20,7 +20,10 @@
   .header__text {
     font-size: 4rem;
     margin: 0;
+    line-height: 1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
   }
 
   img {
@@ -30,6 +33,13 @@
   p{
     font-style: italic;
     padding: 0;
-    margin: .25rem 0 0 0;
+    margin: .5rem 0 0 0;
   }
+
+  br{
+    display: flex;
+    @include tablet{
+        display: none;
+  }
+}
 }

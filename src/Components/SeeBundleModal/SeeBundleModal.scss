@@ -1,0 +1,34 @@
+@import '../../../styles/partials/variables';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    &__content {
+        background: #457e22;
+        padding: 1.25rem;
+        border-radius: .5rem;
+        width: 80%;
+        max-width: 31.25rem;
+        text-align: center;
+    }
+    
+    &__close {
+        position: absolute;
+        top: .625rem;
+        right: .9375rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    &__details > * {
+        color: $white;
+    }
+}

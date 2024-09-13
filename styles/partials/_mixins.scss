@@ -1,0 +1,71 @@
+@use './media' as *;
+
+
+//breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+// Tablet mixin for responsive styles at tablet sizes
+@mixin tablet {
+  @media (min-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+// Desktop mixin for responsive styles at desktop sizes
+@mixin desktop {
+  @media (min-width: #{$desktop-breakpoint}) {
+    @content;
+  }
+}
+
+body {
+    font-family: 'Helvetica';
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    @include tablet {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+    }
+}
+
+h2 {
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    @include tablet {
+        font-size: .75rem;
+        line-height: 1.25rem;
+    }
+}
+
+p {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+}
+
+label, button {
+    font-size: .625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    @include tablet {
+        font-size: .75rem;
+        line-height: 1.25rem;
+    }
+}
