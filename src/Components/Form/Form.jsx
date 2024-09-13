@@ -42,6 +42,7 @@ function Form() {
 
   const handleAddButtonClick = (event) => {
     event.preventDefault();
+    launchConfetti();
 
     // Check for empty fields
     if (!name || !age || !favoriteGenre) {
@@ -72,7 +73,7 @@ function Form() {
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
-    launchConfetti();
+    // launchConfetti();
   };
 
   const handleCloseModal = () => {
