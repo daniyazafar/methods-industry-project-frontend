@@ -6,13 +6,16 @@ import "./App.scss";
 import Form from "./Components/Form/Form";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
-    <Router> {/* Wrap your app with Router */}
+    <Router>
+      <div className="full-page__content">
       <Header />
       <Form />
-      <Footer />
+      </div>
+      <div className="full-page__footer">
+        <Footer />
+      </div>
     </Router>
   );
 }
