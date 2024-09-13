@@ -84,8 +84,9 @@ function Form() {
     confetti({
       particleCount: 150,
       spread: 60,
-      origin: { y: 0.6 }, // Adjust the starting point (lower down the screen)
+      origin: { y: 0.6 },
       colors: ["#6a1b9a", "#388e3c", "#8e24aa", "#4caf50"],
+      git,
     });
   };
 
@@ -151,16 +152,18 @@ function Form() {
                 <option value="" disabled>
                   Select your favorite genre
                 </option>
-                <option value="Action">Drama</option>
-                <option value="Comedy">Food and DIY</option>
-                <option value="Drama">Sports</option>
-                <option value="Fantasy">Blockbusters</option>
-                <option value="Horror">Science and History</option>
-                <option value="Mystery">Nature and Exploring</option>
-                <option value="Romance">Regional Favourites</option>
-                <option value="Sci-Fi">Lifestyle</option>
-                <option value="Thriller">Comedy</option>
-                <option value="Western">Family</option>
+                <option value="Drama">Drama</option>
+                <option value="Food and DIY">Food and DIY</option>
+                <option value="Sports">Sports</option>
+                <option value="Blockbusters">Blockbusters</option>
+                <option value="Science and History">Science and History</option>
+                <option value="Nature and Exploring">
+                  Nature and Exploring
+                </option>
+                <option value="Regional Favourites">Regional Favourites</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Family">Family</option>
               </select>
             </div>
 
