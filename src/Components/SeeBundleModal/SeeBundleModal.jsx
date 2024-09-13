@@ -48,7 +48,7 @@ function SeeBundleModal({ onClose }) {
     <div className="modal" onClick={onClose}>
       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
         <span className="modal__close" onClick={() => {
-    window.location.reload(); // Refresh the page
+        window.location.reload();
   }}>
           X
         </span>
