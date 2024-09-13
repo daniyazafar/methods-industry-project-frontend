@@ -4,12 +4,11 @@
 
 .footer {
 
-    background-color: $dark-green;
+  background-color: $dark-green;
     padding: .5rem;
     text-align: center;
     color: $footer-text;
-    position: relative;
-    bottom: 0;
+    margin-top: 40vh;
     width: 100%;
   
   .footer__text {

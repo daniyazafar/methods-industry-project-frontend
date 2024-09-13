@@ -15,16 +15,16 @@ function Form() {
 
   // Array of 10 different shades of green and purple
   const colors = [
+    "#4a148c", // Deep purple
     "#6a1b9a", // Dark purple
     "#8e24aa", // Medium purple
     "#9c27b0", // Light purple
-    "#7b1fa2", // Deep purple
-    "#4a148c", // Darker purple
-    "#388e3c", // Medium green
-    "#2e7d32", // Dark green
+    "#d500f9", // Bright purple
     "#1b5e20", // Forest green
+    "#2e7d32", // Dark green
+    "#388e3c", // Medium green
     "#4caf50", // Light green
-    "#66bb6a", // Mint green
+    "#76ff03", // Neon green
   ];
 
   // Function to select a random color from the colors array
@@ -69,6 +69,9 @@ function Form() {
     setFavoriteGenre("");
     setBudget("");
     setShowFields(false);
+
+    // Launch confetti when a new member is added
+    launchConfetti();
   };
 
   const handleOpenModal = () => {
@@ -86,7 +89,6 @@ function Form() {
       spread: 60,
       origin: { y: 0.6 },
       colors: ["#6a1b9a", "#388e3c", "#8e24aa", "#4caf50"],
-      git,
     });
   };
 
@@ -94,10 +96,10 @@ function Form() {
     <div className="form-container">
       <h3>Let's create a personalized bundle for you!</h3>
       <form className="form" action="">
-        <label htmlFor="budget">What's your budget:</label>
+        <label htmlFor="budget">What's your monthly budget:</label>
         <input
           className="form__budget"
-          placeholder="e.g. $50"
+          placeholder="e.g. $8"
           type="number"
           name="budget"
           id="budget"
