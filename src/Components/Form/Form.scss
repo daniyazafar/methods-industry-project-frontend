@@ -118,3 +118,10 @@
     text-align: left;
     word-wrap: break-word;
 }
+
+.form__error {
+    color: #c94515; // Error color (matches your existing $error color variable if used)
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+  }
+  
